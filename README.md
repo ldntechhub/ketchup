@@ -1,2 +1,6 @@
-# ketchup
-Codebase for quizzies, games and resources for Girlguiding activities
+# Ketchup
+
+
+Codebase for quizzes, games and resources for Girlguiding activities
+
+
