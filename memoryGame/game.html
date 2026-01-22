@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--boostrap here -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+
+    <!--  google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous"
+      rel="stylesheet"
+    />
+    <!--css access here------------------->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Queen's Coffee</title>
+  </head>
+
+  <body>
+    <!--header starts here-->
+    <header>
+      <div class="topnav">
+        <a href="index.html" class="active"
+          ><img id="sakura" src="assets/images/logo.png" alt="Sakura flower"
+        /></a>
+      </div>
+    </header>
+    <!---header ends here-->
+
+    <!---Memory coffee shop starts here-->
+    <h2 class="heading-game">Memory Coffee Game</h2>
+
+    <span id="result"></span>
+    <span id="time">0</span>
+
+    <!--I used bootstrap to create the grid for the game -->
+    <section class="sectioncard">
+      <div class="container game-area">
+        <div class="row cards">
+          <div class="front-side col-12">
+            <div id="card-game"></div>
+          </div>
+          <div class="back-side col-12">
+            <div id="back-game"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="button-area col-12">
+      <a href="game.html" id="buttoncolor">Reset Game</a>
+    </div>
+
+    <!---Memory game ends here-->
+
+    <footer>
+      <p>Copyright © Queen's Coffee 2023</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

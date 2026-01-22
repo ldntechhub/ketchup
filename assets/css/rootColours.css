@@ -1,0 +1,95 @@
+/* File of root colours for Girl Guide branding */
+
+:root {
+	--black: #1d1d1b;
+	--white: #fff;
+	--seeThru: rgba(0, 167, 229, 0.7);
+
+	/* Girl Guiding General Colors ---------------------------- */
+
+	/* Primary Colors */
+	--GG-pri-1: #161b4e;
+	--GG-pri-2: #007bc4;
+	--GG-pri-3: #00a7e5;
+
+	/* Secondary colors */
+	--GG-sec-1: #;
+	--GG-sec-2: #82bd48;
+	--GG-sec-3: #ffe500;
+	--GG-sec-4: #218ccc;
+
+	/* Accent colors */
+	--GG-acc-1: #79348b;
+	--GG-acc-2: #008939;
+	--GG-acc-3: #f6a000;
+
+	/* Rainbows --------------------------------------------- */
+
+	/* Primary Colors */
+	--RB-pri-1: #96d3f5;
+	--RB-pri-2: #e1120e;
+
+	/* Secondary colors */
+	--RB-sec-1: #ebb5d4;
+	--RB-sec-2: #82bd48;
+	--RB-sec-3: #ffe500;
+	--RB-sec-4: #218ccc;
+
+	/* Accent colors */
+	--RB-acc-1: #79348b;
+	--RB-acc-2: #008939;
+	--RB-acc-3: #f6a000;
+
+	/* Brownies --------------------------------------------- */
+
+	/* Brownies Primary Colors */
+	--BR-pri-1: #ffc80a;
+	--BR-pri-2: #603d33;
+
+	/* Brownies Secondary colors */
+	--BR-sec-1: #ef7b00;
+	--BR-sec-2: #a460a3;
+	--BR-sec-3: #007844;
+	--BR-sec-4: #44bdee;
+
+	/* Brownies Accent colors */
+	--BR-acc-1: #e1120e;
+	--BR-acc-2: #ffef86;
+	--BR-acc-3: #82bd48;
+	--BR-acc-4: #0067b2;
+
+	/* Guides  --------------------------------------------- */
+
+	/* Guides Primary Colors */
+	--GU-pri-1: #173a86;
+	--GU-pri-2: #8cb5e2;
+
+	/* Guides Secondary colors */
+	--GU-sec-1: #ef7b00;
+	--GU-sec-2: #a460a3;
+	--GU-sec-3: #007844;
+	--GU-sec-4: #44bdee;
+
+	/* Guides Accent colors */
+	--GU-acc-1: #e1120e;
+	--GU-acc-2: #ffef86;
+	--GU-acc-3: #82bd48;
+	--GU-acc-4: #0067b2;
+
+	/* Rangers --------------------------------------------- */
+
+	/* Rangers Primary Colors */
+	--RA-pri-1: #54184a;
+	--RA-pri-2: #fbdfe7;
+
+	/* Rangers Secondary colors */
+	--RA-sec-1: #e1120e;
+	--RA-sec-2: #d1ffd5;
+	--RA-sec-3: #4ea5dc;
+	--RA-sec-4: #8fd7b9;
+
+	/* Rangers Accent colors */
+	--RA-acc-1: #ad4c03;
+	--RA-acc-2: #8cb5e2;
+	--RA-acc-3: #ff8087;
+}

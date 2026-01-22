@@ -1,0 +1,361 @@
+/* fonts for the website here*/
+@font-face {
+    font-family: "lumanosimo";
+    src: url("../fonts/lumanosimo.ttf") format("truetype");
+}
+
+/*-----font for section menu image*/
+@font-face {
+    font-family: "barriecito";
+    src: url("../fonts/barriecito.ttf") format("truetype");
+}
+
+/* style for the header*/
+.topnav {
+    background-color: #fedce7;
+    overflow: hidden;
+}
+
+.topnav div {
+    color: purple;
+    font-size: 20px;
+    padding: 44px 60px 17px;
+}
+
+#sakura {
+    height: 4rem;
+    width: 4rem;
+}
+
+/* section style here*/
+.homepage {
+    background: url(../images/secondesign.png) no-repeat;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    background-color: #fedce7;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+a.playnow {
+    position: relative;
+    left: 74%;
+    color: #d91979;
+    background: #75ddd8;
+    border-color: #9d3f76;
+    border-style: ridge;
+    border-radius: 9%;
+    margin: 0 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    font-family: "barriecito", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+#lovecoffee {
+    color: black;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-transform: capitalize;
+    position: relative;
+    margin: 2px;
+    left: 289%;
+}
+
+/* footer style starts here*/
+
+footer>p {
+    color: #d91979;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #fedce7;
+}
+
+.socialmedia {
+    text-align: center;
+}
+
+.socialmedia li {
+    display: inline;
+}
+
+.socialmedia i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 0 5% 0 5%;
+    color: purple;
+}
+
+/*footer ends here*/
+
+/* memory game style here--------------------------------------*/
+
+/*heading game style here-----*/
+.heading-game {
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: purple;
+    text-transform: capitalize;
+    background-color: #fedce7;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+/* heading game ends here------*/
+
+/* timer stars here ----------------*/
+
+#time {
+    color: #d91979;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: #fedce7;
+}
+
+#result {
+    color: #d91979;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: #fedce7;
+
+}
+
+/*timer ends here-------------------*/
+
+/*game area stars here-----------------*/
+.sectioncard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fedce7;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.game-area {
+    height: 400px;
+    width: 400px;
+    background-color: #d91979;
+    border-radius: 10px;
+    padding: 32px 23px 20px 30px;
+    position: relative;
+}
+
+.cards {
+    perspective: 1000px;
+}
+
+.front-side {
+    position: relative;
+    z-index: 2;
+    perspective: 1000px;
+}
+
+.back-side {
+    position: absolute;
+    z-index: 1;
+    perspective: 1000px;
+}
+
+#card-game img {
+    max-width: 85px;
+    border-radius: 9px;
+    padding: 5px;
+}
+
+#back-game img {
+    max-width: 85px;
+    border-radius: 9px;
+    padding: 5px;
+    backface-visibility: hidden;
+}
+
+.flippedcard {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+/* start game button here---------------------------------*/
+
+.button-area {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #fedce7;
+
+}
+
+#buttoncolor {
+    color: #d91979;
+    background: #75ddd8;
+    border-color: #9d3f76;
+    border-style: ridge;
+    border-radius: 9%;
+    margin: 0 20px 20px 20px;
+    padding: 5px 5px 5px 5px;
+    font-family: "lumanosimo", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 23px;
+
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 991px) {
+    .topnav a {
+        padding: 30px 34px 15px 20px;
+    }
+
+    .topnav div {
+        padding: 34px 43px;
+    }
+
+    #lovecoffee {
+        font-size: 1rem;
+        position: relative;
+        left: 196%;
+    }
+
+}
+
+@media screen and (max-width: 826px) {
+    .topnav a {
+        padding: 14px 17px 10px 20px;
+        font-size: 14px;
+    }
+
+    .topnav div {
+        padding: 14px 13px;
+    }
+
+    #lovecoffee {
+        font-size: 63%;
+        margin: 5px;
+        left: 74%;
+    }
+
+    a.playnow {
+        font-size: 17px;
+        left: 69%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav div:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav div.icon {
+        float: right;
+        display: block;
+    }
+
+    a.playnow {
+        font-size: 18px;
+        left: -27px;
+        bottom: 102px;
+    }
+
+    #lovecoffee {
+        display: none;
+    }
+
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+
+    .topnav.responsive div.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .homepage {
+        background-size: 137%;
+        padding: 0;
+    }
+
+
+    #lovecoffee {
+        display: none;
+    }
+
+    /* game area for phone */
+    .game-area {
+        height: 309px;
+        padding: 30px 14px 20px 30px;
+        width: 300px;
+    }
+
+    .heading-game {
+
+        font-size: 25px;
+    }
+
+    #card-game img {
+        max-width: 63px;
+    }
+
+    #back-game img {
+        max-width: 63px;
+
+    }
+
+    #result {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .heading-game {
+
+        font-size: 25px;
+    }
+
+    #card-game img {
+        max-width: 63px;
+    }
+
+    #back-game img {
+        max-width: 63px;
+
+    }
+}

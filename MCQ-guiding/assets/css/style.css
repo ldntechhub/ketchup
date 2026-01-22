@@ -1,0 +1,717 @@
+/* ----------------------------------------------------- Colours */
+
+/* Custom CSS variables for colours used throughout the website */
+
+/* Code adapted from W3Schools - CSS Variables - The var() Function (https://www.w3schools.com/css/css3_variables.asp) */
+
+:root {
+  --indigo-blue: #0a3d62;
+  --golden-yellow: #fbc02d;
+  --rusty-red: #92272d;
+  --forest-green: #3a5a40;
+  --light-ivory: #f8f1e5;
+  --shadow-slate: #3e3e3d;
+}
+
+/* ----------------------------------------------------- Typography */
+
+/* Custom fonts added to the website */
+
+/* Code adapted from W3Schools - CSS Web Fonts (https://www.w3schools.com/css/css3_fonts.asp) */
+
+/* Avant Garde Gothic Medium font */
+@font-face {
+  font-family: "AvantGardeGothicMedium";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/avantgardegothic-medium.woff2) format("woff2");
+  src: url(../fonts/avantgardegothic-medium.woff) format("woff");
+}
+
+/* Avant Garde Gothic Book font */
+@font-face {
+  font-family: "AvantGardeGothicBook";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/avantgardegothic-book.woff2) format("woff2");
+  src: url(../fonts/avantgardegothic-book.woff) format("woff");
+}
+
+/* ----------------------------------------------------- General Styling */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: "AvantGardeGothicBook", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "AvantGardeGothicMedium", sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 18px;
+}
+
+/* ----------------------------------------------------- Body Styling */
+
+body {
+  width: 100%;
+
+  color: var(--light-ivory);
+
+  background: url("../images/backgrounds/background.webp") no-repeat;
+  background-color: var(--shadow-slate);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Darken the background image using an overlay */
+.body-container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body,
+.body-container {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+/* ----------------------------------------------------- Header Section */
+
+/* Navigation bar styling */
+
+/* Code adapted from Medium - Building a Responsive Navigation Bar with CSS (https://volodymyrzh.medium.com/building-a-responsive-navigation-bar-with-css-593ffdb26887) */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 3% 0;
+
+  background-color: transparent;
+}
+
+/* Logo */
+.site-logo {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  margin-left: 16px;
+}
+
+/* Navigation menu items */
+.nav-links {
+  list-style: none;
+  z-index: 10;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav-links span {
+  color: var(--light-ivory);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links span:focus,
+.nav-links span:hover {
+  color: var(--golden-yellow);
+  border-bottom: 1px solid var(--golden-yellow);
+}
+
+/* Hamburger icon for smaller screens (hidden by default) */
+.burger {
+  display: none;
+  margin-right: 16px;
+}
+
+/* Hamburger icon lines (for X toggle effect) */
+.line1,
+.line2,
+.line3 {
+  border-radius: 10px;
+}
+
+/* Transformations to create an 'X' from hamburger lines when active */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0; /* Hide the middle line */
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Fixed position styling for when menu is open */
+.fixed-position {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Backdrop styling for the mobile menu */
+.menu-backdrop {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9;
+}
+
+.menu-backdrop.display {
+  display: block; /* Display backdrop when menu is active */
+}
+
+/* ----------------------------------------------------- Main Sections */
+
+/* Main content container */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 75vh;
+  margin-top: 20px;
+}
+
+/* Styling for the glassmorphism effect box (used as content container) */
+/* Code adapted from Glassmorphism CSS Generator (https://css.glass) */
+.glass-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  padding: 25px 20px 20px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  backdrop-filter: blur(33.3px);
+  -webkit-backdrop-filter: blur(33.3px);
+}
+
+/* ----------------------------------------------------- Home Content */
+
+/* Content styling specific to the homepage */
+#home-content p {
+  padding: 5px;
+  margin: 7px 0 20px;
+
+  line-height: 25px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styling for start, return home, and play again buttons */
+.glass-box #start-btn,
+.glass-box .returnHome-btn,
+.glass-box #playAgain-btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  padding: 0 15px 0 20px;
+  margin-bottom: 10px;
+
+  font-size: 22px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: var(--shadow-slate);
+  cursor: pointer;
+
+  background: none;
+  background-color: var(--light-ivory);
+
+  border: none;
+  border-radius: 3px;
+  outline: none;
+
+  transition: 0.5s;
+
+  gap: 5px;
+}
+
+.glass-box .returnHome-btn {
+  width: 250px;
+}
+
+/* Hover state for buttons */
+.glass-box #start-btn:hover,
+.glass-box .returnHome-btn:hover,
+.glass-box #playAgain-btn:hover {
+  color: var(--light-ivory);
+
+  opacity: 90%;
+
+  background: var(--indigo-blue);
+}
+
+/* ----------------------------------------------------- Quiz Box Section */
+
+/* Quiz box container */
+.quiz-box {
+  width: 100%;
+  position: relative;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Questions */
+.question {
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px 0 20px;
+  line-height: 30px;
+}
+
+/* Image-based questions */
+img {
+  margin: 5px 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Answer buttons */
+#answer-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 columns with equal width */
+  gap: 10px; /* Space between the grid items */
+}
+
+#answer-buttons .btn {
+  height: 70px;
+  width: 100%; /* Ensure buttons take full width of their grid cell */
+  padding: 12px;
+  background: var(--light-ivory);
+  border: none;
+  border-radius: 3px;
+  font-size: 17px;
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--shadow-slate);
+  line-height: 20px;
+  font-weight: 600;
+}
+
+/* Button hover effects */
+#answer-buttons .btn:hover:not([disabled]) {
+  background-color: var(--indigo-blue);
+  color: var(--light-ivory);
+}
+
+/* Disabled button styling */
+#answer-buttons .btn:disabled {
+  cursor: no-drop;
+}
+
+/* Quiz box footer */
+.quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  width: 100%;
+  padding: 20px;
+  border-top: 2px solid var(--golden-yellow);
+}
+
+.quiz-footer #question-total {
+  font-size: 16px;
+  margin-right: auto;
+}
+
+/* Next button */
+#next-btn {
+  background: var(--light-ivory);
+  font-size: 15px;
+  border: none;
+  width: 100px;
+  height: 45px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: auto;
+  transition: background-color 0.3s;
+  border-radius: 3px;
+  color: var(--shadow-slate);
+}
+
+/* Next button hover effects */
+#next-btn:hover {
+  background-color: var(--indigo-blue);
+  color: var(--light-ivory);
+}
+
+/* Disabled next button styling */
+#next-btn[disabled] {
+  /* Grey color to indicate disabled state */
+  background-color: var(--shadow-slate);
+  cursor: not-allowed;
+  pointer-events: none; /* Prevents clicking on the disabled button */
+  color: rgba(248, 241, 229, 0.2);
+}
+
+/* Disabled Next button hover effects */
+#next-btn:disabled:hover {
+  background-color: var(--shadow-slate);
+  color: rgba(248, 241, 229, 0.2);
+}
+
+/* Answers change colour depending on correct or incorrect answer */
+#answer-buttons .correct {
+  background-color: var(--forest-green) !important;
+  color: var(--light-ivory) !important;
+}
+
+#answer-buttons .incorrect {
+  background-color: var(--rusty-red) !important;
+  color: var(--light-ivory) !important;
+}
+
+/* To hide quiz content when website loads */
+.hide {
+  display: none;
+}
+
+/* ----------------------------------------------------- Quiz Results Section */
+
+/* Percentage Container */
+
+/* Code adapted from YouTube - 'How To Make Quiz Website Using HTML CSS And Javascript' by Codehal (https://www.youtube.com/watch?v=Vp8x8-reqZA&t=1946s) */
+.percentage-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0 40px;
+}
+
+.percentage-container .circular-progress {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: conic-gradient(
+    var(--golden-yellow),
+    3.6deg,
+    rgba(255, 255, 255, 0.1) 0deg
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.percentage-container .circular-progress::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  background: var(--shadow-slate);
+  border-radius: 50%;
+}
+
+.circular-progress .progress-value {
+  position: relative;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+/* Score Text */
+.percentage-container .score-text {
+  margin-top: 40px;
+}
+
+/* ----------------------------------------------------- Modal section */
+
+/* Code adapted from W3Schools - How TO - CSS/JS Modal (https://www.w3schools.com/howto/howto_css_modals.asp) */
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none; /* Hidden by default */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal content */
+.modal-content {
+  width: 50%;
+  margin: 15% auto;
+  margin-top: 200px;
+  padding: 25px;
+  left: 50%;
+
+  text-align: center;
+
+  background: var(--light-ivory);
+
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  padding: 10px 0 20px;
+  font-size: 25px;
+  color: var(--indigo-blue);
+}
+
+.modal-content p {
+  color: var(--shadow-slate);
+}
+
+/* Close button */
+.close-button {
+  color: var(--shadow-slate);
+  float: right;
+  font-size: 28px;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--indigo-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content a {
+  text-decoration: none;
+  color: var(--indigo-blue);
+}
+
+.modal-content a:hover {
+  color: var(--golden-yellow);
+}
+
+/* ----------------------------------------------------- Footer Section */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 5px;
+
+  background-color: transparent;
+}
+
+footer p {
+  font-size: 14px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--light-ivory);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--golden-yellow);
+}
+
+/* ----------------------------------------------------- 404 Page Styling */
+
+#logo-404 {
+  cursor: none;
+}
+
+/* ----------------------------------------------------- Media Queries */
+
+@media screen and (max-width: 768px) {
+  /* Code adapted from Medium - Building a Responsive Navigation Bar with CSS (https://volodymyrzh.medium.com/building-a-responsive-navigation-bar-with-css-593ffdb26887) */
+
+  /* Responsive nav */
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: var(--indigo-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    padding-top: 25px;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    margin: 10px;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-ivory);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-active {
+    transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .nav-links li {
+    animation: navLinkFade 0.5s ease forwards 0.5s;
+  }
+
+  .site-logo {
+    height: 55px;
+    width: 55px;
+  }
+
+  /* Main content section */
+  .main-container {
+    margin-top: 10px;
+  }
+
+  #home-content h1 {
+    font-size: 40px;
+  }
+
+  #home-content {
+    margin-top: 10px;
+  }
+
+  #home-content p {
+    font-size: 15px;
+  }
+
+  .glass-box {
+    padding: 15px;
+  }
+
+  .glass-box #start-btn,
+  .glass-box .returnHome-btn,
+  .glass-box #playAgain-btn {
+    font-size: 18px;
+    height: 45px;
+  }
+
+  /* Modals */
+  .modal-content {
+    width: 350px;
+    margin-top: 150px;
+    object-fit: none;
+  }
+
+  /* Footer */
+  footer {
+    padding-bottom: 2px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  /* Quiz */
+
+  .question {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  #answer-buttons {
+    display: block;
+  }
+
+  #answer-buttons .btn {
+    padding: 7px;
+    height: 40px;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  img {
+    width: 250px;
+    height: 125px;
+  }
+
+  .quiz-footer #question-total {
+    font-size: 12px;
+  }
+
+  .quiz-footer #next-btn {
+    width: 75px;
+    height: 40px;
+  }
+
+  /* Quiz results */
+  #quiz-results h1 {
+    font-size: 25px;
+  }
+
+  .percentage-container .circular-progress {
+    width: 150px;
+    height: 150px;
+  }
+
+  .percentage-container .circular-progress::before {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circular-progress .progress-value {
+    font-size: 25px;
+  }
+
+  .percentage-container .score-text {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .percentage-container {
+    margin-bottom: 20px;
+  }
+}

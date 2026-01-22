@@ -1,3 +1,306 @@
-h1 {
-	color: blue;
+@import url(rootColours.css);
+
+@import url(rootFonts.css);
+
+* {
+	padding: 2px;
+	margin: 2px;
+	box-sizing: border-box;
+}
+
+/* General Styling for entire Website */
+body {
+	color: var(--white);
+	font-family: "Poppins", sans-serif;
+	background-color: var(--GG-pri-1);
+	margin-left: 5%;
+	margin-right: 5%;
+	line-height: 1.5;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+header {
+	text-align: center;
+	background-color: var(--GG-pri-2);
+	color: var(--white);
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+footer {
+	text-align: center;
+	background-color: var(--GG-pri-2);
+	color: var(--white);
+	padding: 10px;
+	margin-top: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--GU-whites);
+	background-color: var(--seeThru);
+}
+
+li {
+	list-style-type: none;
+}
+/* Main navigation bar ----- */
+nav > ul > li {
+	color: var(--GU-white);
+	/* background-color: var(--GG-pri-3); */
+	font-size: smaller;
+	display: inline-block;
+}
+
+img {
+	height: 250px;
+	width: 200px;
+	object-fit: contain;
+}
+
+a {
+	text-decoration: none;
+	color: var(--white);
+	background-color: var(--GG-pri-1);
+}
+
+a:hover {
+	color: var(--GG-pri-1);
+	background-color: var(--GG-pri-3);
+	text-decoration: underline;
+	text-decoration-color: var(--white);
+}
+
+/* Flexbox class definitions ----------------------------------- */
+
+/* Outer flex containers for 1, 2, 3 and 4 columns */
+.flex-container-cols1,
+.flex-container-cols2,
+.flex-container-cols3,
+.flex-container-cols4 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around; /* spaced evenly */
+	background-color: var(--GG-pri-1);
+}
+
+/* Common attributes for all DIVs in flex containers */
+.flex-container-cols1 > div,
+.flex-container-cols2 > div,
+.flex-container-cols3 > div,
+.flex-container-cols4 > div {
+	background-color: var(--GG-pri-2);
+	margin: 5px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+
+/* Specific attribute 1 column wide across */
+.flex-container-cols1 > div {
+	width: 1500px;
+	font-size: large;
+}
+
+/* Specific attribute 2 columns wide across */
+.flex-container-cols2 > div {
+	width: 700px;
+	font-size: medium;
+}
+
+/* Specific attribute 3 columns wide across */
+.flex-container-cols3 > div {
+	width: 450px;
+	font-size: small;
+}
+
+/* Specific attribute 4 columns wide across */
+.flex-container-cols4 > div {
+	width: 350px;
+	font-size: smaller;
+}
+
+/* END OF FLEX ATTRIBUTES -------------------------------------- */
+
+/* Hero image  */
+#hero_image {
+	height: 500px;
+	width: 99%;
+	background: url("../images/girls.png") no-repeat center center/cover;
+	position: relative;
+	background-color: var(--GG-pri-1); /* default color if image not found */
+}
+#hero_text_box {
+	/* Use rgba since it has final value which sets the opacity, for semi-transparent box */
+	background-color: rgba(0, 167, 229, 0.7);
+	font-size: 130%;
+	position: absolute;
+	bottom: 15%;
+	right: 5%;
+	width: 60%;
+	min-height: 200px;
+	padding-top: 40px;
+	padding-left: 10px;
+}
+
+#hero_text_box > h2,
+#hero_text_box > h3 {
+	background-color: rgba(0, 167, 229, 0.3);
+	color: var(--white);
+}
+
+/* RWD rows and columns ------------------------------- */
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.top {
+	vertical-align: top;
+}
+
+.middle {
+	vertical-align: middle;
+}
+
+.bottom {
+	vertical-align: bottom;
+}
+
+.inline {
+	display: inline-block;
+}
+
+/* General Class Styling for all sections ------------------------------- */
+
+/* Small circular badge with border */
+.badge-small {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	align-content: center;
+	text-align: center;
+}
+
+/* Medium circular badge with border */
+.badge-medium {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	align-content: center;
+	text-align: center;
+}
+
+/* Large circular badge with border */
+.badge-large {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+	align-content: center;
+	text-align: center;
+}
+
+/* Document styling ---------------------------------------------*/
+
+/* certain sections */
+.GG {
+	color: var(--white);
+	background-color: var(--GG-pri-2);
+	text-align: center;
+}
+
+/* Document styling for Rainbows ---------------------------------------------*/
+
+/* Rainbow headings */
+.RB {
+	color: var(--RB-pri-1);
+}
+
+.RB-section {
+	color: var(--GGDarkBlue);
+	background-color: var(--white);
+}
+
+.RB-primary {
+	color: var(--RB-pri-2);
+	background-color: var(--RB-pri-1);
+	border: 2px solid var(--RB-pri-2);
+}
+
+/* Document styling for Brownies ---------------------------------------------*/
+
+/* Brownies headings */
+.BR-h1,
+.BR-h2,
+.BR-h3 {
+	color: var(--BR-pri-1);
+}
+
+.BR-section {
+	color: var(--GGDarkBlue);
+	background-color: var(--white);
+}
+
+.BR-primary {
+	color: var(--BR-pri-2);
+	background-color: var(--BR-pri-1);
+	border: 2px solid var(--BR-pri-2);
+}
+
+/* Document styling for Guides ---------------------------------------------*/
+
+/* headings */
+.GU-h1,
+.GU-h2,
+.GU-h3 {
+	color: var(--GU-pri-1);
+}
+
+.GU-section {
+	color: var(--GGDarkBlue);
+	background-color: var(--white);
+}
+
+.GU-primary {
+	color: var(--GU-pri-1);
+	background-color: var(--GU-pri-2);
+	border: 4px solid var(--GU-pri-1);
+}
+/* Document styling for Rangers ---------------------------------------------*/
+
+/* headings */
+.RA-h1,
+.RA-h2,
+.RA-h3 {
+	color: var(--RA-pri-1);
+}
+
+.RA-section {
+	color: var(--GGDarkBlue);
+	background-color: var(--white);
+}
+
+.RA-primary {
+	color: var(--GU-pri-1);
+	background-color: var(--RA-pri-2);
+	border: 4px solid var(--RA-pri-1);
 }
