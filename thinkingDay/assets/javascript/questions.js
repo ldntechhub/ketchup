@@ -38,7 +38,7 @@ let questions = [
 	{
 		question: "You could going skiing if you stayed at this World Centre.",
 		image: "assets/images/question-images/OurChalet.jpg",
-
+		alt: "",
 		answers: [
 			{ text: "Pax Lodge", correct: false },
 			{ text: "Sangam", correct: false },
@@ -50,7 +50,7 @@ let questions = [
 	{
 		question: "At this World Centre you could try on the a traditional sari.",
 		image: "assets/images/question-images/sangam.jpg",
-
+		alt: "",
 		answers: [
 			{ text: "Pax Lodge", correct: false },
 			{ text: "Sangam", correct: true },
@@ -62,7 +62,7 @@ let questions = [
 	{
 		question: "You might stay here and visit Big Ben.",
 		image: "assets/images/question-images/PaxLodge.jpg",
-
+		alt: "",
 		answers: [
 			{ text: "Pax Lodge", correct: true },
 			{ text: "Sangam", correct: false },
@@ -74,7 +74,7 @@ let questions = [
 	{
 		question: "Set up in 2010 this is the 5th World Centre.",
 		image: "assets/images/question-images/kusafiri.png",
-
+		alt: "",
 		answers: [
 			{ text: "Pax Lodge", correct: false },
 			{ text: "Kusafiri", correct: true },
